@@ -13,7 +13,7 @@ itemsRest = {
     description: string;
 }
 
-const PoolMenu = () => {
+const PoolRest = () => {
 
     const url = "https://www.bit-by-bit.ru/api/student-projects/restaurants"
     const response = await fetch(url);
@@ -31,12 +31,11 @@ const PoolMenu = () => {
                     <p>{card.openAt} - {closeAt}</p>
                     <p>{card.cuisine}</p>
                     <p>{card.description}</p>
-
-
                 </div>
+                //<button>Войти в ресторан</button>
             ])}
         </div>
     )
 }
 
-export default PoolMenu
+export default PoolRest
