@@ -5,7 +5,7 @@ const Header = () => {
           <nav className="flex gap-8 justify-center items-center">
             <Link to="/">Главная страница</Link>
   
-            <Link to="/oldPurchases"></Link>
+            <Link to="/PoolRest"></Link>
           </nav>
         </div>
       </header>
