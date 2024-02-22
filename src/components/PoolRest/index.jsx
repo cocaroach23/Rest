@@ -1,4 +1,4 @@
-
+import Button from "../Button"
 
 const PoolRest = () => {
 
@@ -23,7 +23,7 @@ const PoolRest = () => {
                         <p>{restoran.cuisine}</p>
                         <p>{restoran.description}</p>
                     </div>
-                    <button>Войти в ресторан</button>
+                    <button title={"Посмотреть меню"} />
                 </div>
             ])}
         </div>
