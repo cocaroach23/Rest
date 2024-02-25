@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "components/Header";
-import PoolRest from "../PoolRest";
+import Header from "../Header";
+import Restorans from "../Restorans";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/poolRest" element={<PoolRest />} />
+        <Route path="/" element={<Restorans />} />
       </Routes>
     </BrowserRouter>
   );
