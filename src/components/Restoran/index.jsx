@@ -24,7 +24,7 @@ const Restoran = () => {
                     />
                     <p>{items.description}</p>
                     <p>{items.price}</p>
-                    <button></button>
+                    <button>Добавить в корзину</button>
                 </div>
                 
             ])}
