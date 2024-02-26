@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import Button from "../Button"
 
 const Restoran = () => {
 
@@ -24,7 +25,7 @@ const Restoran = () => {
                     />
                     <p>{items.description}</p>
                     <p>{items.price}</p>
-                    <button>Добавить в корзину</button>
+                    <Button>Добавить в корзину</Button>
                 </div>
                 
             ])}
