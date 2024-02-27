@@ -32,6 +32,7 @@ const Restorans = () => {
                     <p className="text-sm leading-5 text-gray-900">
                         {restoran.description}
                     </p>
+                    <Button>Посмотреть меню</Button>
                 </div>
             ])}
         </div>
