@@ -1,5 +1,7 @@
 import Button from "../Button"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+
 
 const Restorans = () => {
 
@@ -11,9 +13,7 @@ const Restorans = () => {
         .then((response) => response.json())
         .then((data) => setRestorans(data))
         }, [])
-    
-
-    
+       
 
     return (
         
@@ -32,7 +32,9 @@ const Restorans = () => {
                     <p className="text-sm leading-5 text-gray-900">
                         {restoran.description}
                     </p>
-                    <Button>Посмотреть меню</Button>
+                    <Link to={`/restoran/${restoran.slug}`}>
+                        <Button title="Посмотреть меню" />
+                    </Link>
                 </div>
             ])}
         </div>

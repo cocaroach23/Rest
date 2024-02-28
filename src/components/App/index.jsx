@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../Header";
 import Restorans from "../Restorans";
+import Restoran from "../Restoran";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Restorans />} />
+        <Route path="/restoran/:slug" element={<Restoran />} />
       </Routes>
     </BrowserRouter>
   );
