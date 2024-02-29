@@ -1,6 +1,6 @@
 const Basket = () => {
 
-        let [isOpen , setIsOpen ] = useState()
+       // let [isOpen , setIsOpen ] = useState()
 
 
         return(
@@ -8,3 +8,6 @@ const Basket = () => {
         )
 
 }
+
+
+export default Basket
