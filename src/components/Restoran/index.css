@@ -24,7 +24,7 @@
 
 .working_hours{
     font-size: 30px;
-    color: #FFB6C1;
+    color: #FF0000;
     font-weight: 900;
 }
 
@@ -42,7 +42,7 @@
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
-    color: #BC8F8F;
+    color: #FFA500;
     
 }
 
@@ -51,5 +51,5 @@
     font-weight: 500;
     font-style: normal;
     font-size: 30px;
-    color: #B8860B;
+    color: #FFFF00;
 }

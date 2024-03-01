@@ -59,15 +59,16 @@ const Restoran = () => {
                     <div key={dish.id} className="flex flex-col items-cente justify-between text-center">
                         <div>
                         <h2 className="card_dish">{dish.name}</h2>
-                        <img className="border-0 rounded-full"
+                        <img className="border-0 rounded-full "
                             src={dish.image} 
                         />
-                        <p className="dish_description">{dish.description}</p>
+                        
                         
                         </div>
                         <div>
+                            <p className="dish_description">{dish.description}</p>
                             <p className="dish_price">${dish.price}</p>
-                            <Button className="bg-yellow-700" title="Добавить в корзину" onClick={() => addToBasket(dish)}/>
+                            <Button title="Добавить в корзину" onClick={() => addToBasket(dish)}/>
                         </div>
                     </div>
                     

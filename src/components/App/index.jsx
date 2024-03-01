@@ -3,10 +3,12 @@ import Header from "../Header";
 import Restorans from "../Restorans";
 import Restoran from "../Restoran";
 import Basket from "../Basket"
+import "../App/index.css"
 
 function App() {
   return (
-    
+    <div className="bg_fon">
+      <div className="">
     <BrowserRouter>
       <Header />
       <Routes>
@@ -15,6 +17,8 @@ function App() {
         <Route path="/basket" element={<Basket />} />
       </Routes>
     </BrowserRouter>
+    </div>
+    </div>
   );
 }
 
