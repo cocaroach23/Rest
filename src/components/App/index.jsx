@@ -10,11 +10,11 @@ function App() {
     <div className="bg_fon">
       <div className="">
     <BrowserRouter>
-      <Header />
+      <Header  />
       <Routes>
         <Route path="/" element={<Restorans />} />
         <Route path="/restoran/:slug" element={<Restoran />} />
-        <Route path="/basket" element={<Basket />} />
+        <Route path="/basket" element={<Basket />} deleteDish={deleteDish} />
       </Routes>
     </BrowserRouter>
     </div>
