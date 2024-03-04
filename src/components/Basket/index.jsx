@@ -1,17 +1,79 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import "./style.scss";
 import Button from "../Button";
 import Restoran from "../Restoran";
+import Count from "../Count";
 
 const Basket = ({dish, setDishInBasket}) => {
 
     const [ basket , setBasket] = useState(Restoran);
+    const [ total, setTotal] = useState({
+      price: basket.reduce((prev, curr)=>{ return prev + curr.priceTotal}, 0),
+      count: basket.reduce((prev, curr)=>{ return prev + curr.count}, 0)
+    })
+
+    useEffect(() => {                                                                     //уменьшение и увеличение общей стоимости и кол-ва позиций блюд
+      setTotal({
+        price: basket.reduce((prev, curr)=>{ return prev + curr.priceTotal}, 0),
+        count: basket.reduce((prev, curr)=>{ return prev + curr.count}, 0)
+      })
+    },[basket])
 
     const deleteDish = (id) => {
       setBasket((basket) => {
         return basket.filter((dish) =>id !== dish.id )
       })
     }
+
+    const increase = (id) => {                            //увеличение кол-ва позиции блюд
+      setBasket((basket)=>{
+        return basket.map((dish) =>{
+          if (dish.id === id) {
+            return {
+              ...dish,
+              count: ++dish.count,
+              priceTotal: ++dish.count * dish.price
+            }
+          }
+          return dish
+        })
+      })
+    }
+    const decrease = (id) => {                            //уменьшение кол-ва позиции блюд
+      setBasket((basket)=>{
+        return basket.map((dish) =>{
+          if (dish.id === id) {
+            return {
+              ...dish,
+              count: dish.count -1 > 1 ? --dish.count -1 : 1,
+              priceTotal: (dish.count -1 > 1 ? --dish.count : 1) * dish.price
+            }
+          }
+          return dish
+        })
+      })
+    }
+
+    const changeValue = (id, value) => {                  //подсчёт общего кол-ва блюд
+      setBasket((basket) => {
+        return basket.map ((dish) =>{
+          if (dish.id === id) {
+            return {
+              ...dish,
+              count: value,
+              priceTotal: value * dish.price
+            }
+          }
+          return dish
+        })
+      })
+    }
+
+
+    const products = basket.map((dish) =>{
+      return <Basket dish={dish} key={dish.id} deleteDish={deleteDish} increase={increase} decrease={decrease} changeValue={changeValue} />
+    })
+
         return(
          
          
@@ -33,25 +95,13 @@ const Basket = ({dish, setDishInBasket}) => {
   
                       <section className="dish">
                         {setDishInBasket.map(() => [
-                          <div key={newDish.id}>
+                          <div key={dish.id}>
                           
                           <div className="dish__title">{dish.name}</div>
                           <div className="dish__count">
-                              <div className="count">
-                                  <div className="count__box">
-                                      <input type="number" className="count__input" min="1" max="100" value="1" />
-                                  </div>
-                                  <div className="count__controls">
-                                      <button type="button" className="count__up">
-                                          <img src="./img/icons/icon-up.svg" alt="Increase" />
-                                      </button>
-                                      <button type="button" className="count__down">
-                                          <img src="./img/icons/icon-down.svg" alt="Decrease" />
-                                      </button>
-                                  </div>
-                              </div>
+                              <div className="count"><Count count={count} increase={increase} decrease={decrease} changeValue={changeValue}  id={id} /></div>
                           </div>
-                          <div className="dish__price">${dish.price}</div>
+                          <div className="dish__price">${priceTotal}</div>
                           </div>
                         ])}
                           
@@ -65,8 +115,8 @@ const Basket = ({dish, setDishInBasket}) => {
   
                        
                       <footer className="basket-footer">
-                          <div className="basket-footer__count">3 единицы</div>
-                          <div className="basket-footer__price">329 000 руб.</div>
+                          <div className="basket-footer__count">{total.count}</div>
+                          <div className="basket-footer__price">{total.price}</div>
                       </footer>
                   </section>
   

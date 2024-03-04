@@ -8,13 +8,13 @@ import "../App/index.css"
 function App() {
   return (
     <div className="bg_fon">
-      <div className="">
+      <div>
     <BrowserRouter>
       <Header  />
       <Routes>
         <Route path="/" element={<Restorans />} />
         <Route path="/restoran/:slug" element={<Restoran />} />
-        <Route path="/basket" element={<Basket />} deleteDish={deleteDish} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
     </BrowserRouter>
     </div>
