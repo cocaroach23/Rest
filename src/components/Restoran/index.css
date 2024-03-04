@@ -1,55 +1,52 @@
-
-.font-name-rest{
-    font-family: "Anta", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 60px;
-    color: #FFD700;
+.font-name-rest {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: #ffd700;
 }
 
-.font-adress-rest{
-    font-family: "Anta", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    color: #FFA500;
+.font-adress-rest {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #ffa500;
 }
 
-.info_rest{
-    gap: 35px;
-    
-    display: flex;
-    flex-direction: column;
+.info_rest {
+  gap: 35px;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.working_hours{
-    font-size: 30px;
-    color: #FF0000;
-    font-weight: 900;
+.working_hours {
+  font-size: 30px;
+  color: #ff0000;
+  font-weight: 900;
 }
 
-.card_dish{
-    
-    font-size: 25px;
-    font-weight: 400;
-    color: #DAA520;
-    font-family: "Namdhinggo", serif;
-    font-style: normal;
+.card_dish {
+  font-size: 25px;
+  font-weight: 400;
+  color: #daa520;
+  font-family: "Namdhinggo", serif;
+  font-style: normal;
 }
 
-.dish_description{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 20px;
-    color: #FFA500;
-    
+.dish_description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  color: #ffa500;
 }
 
-.dish_price{
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 30px;
-    color: #FFFF00;
+.dish_price {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  color: #ffff00;
 }

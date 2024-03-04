@@ -1,9 +1,7 @@
-.bg_fon{
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url(../Photo/fon.jpg);
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: cover;
+.bg_fon {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)),
+    url(../Photo/fon.jpg);
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
-
-
