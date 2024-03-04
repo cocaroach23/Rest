@@ -56,7 +56,7 @@ const Restoran = () => {
           >
             <div>
               <h2 className="card_dish">{dish.name}</h2>
-              <img className="border-0 rounded-full " src={dish.image} />
+              <img className="border-0 rounded-full " src={dish.image} alt="" />
             </div>
             <div>
               <p className="dish_description">{dish.description}</p>
